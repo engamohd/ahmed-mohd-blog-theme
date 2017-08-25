@@ -24,9 +24,11 @@
     <div class="row">
       <?php if ( have_posts() ): ?>
         <?php while ( have_posts() ) : the_post(); ?>
-          <?php the_content(); ?>
-            <?php endwhile; ?>
-              <?php endif; ?>
+          <div class="post-content">
+            <?php the_content(); ?>
+          </div>
+          <?php endwhile; ?>
+            <?php endif; ?>
     </div>
   </div>
   <?php get_footer( ); ?>
