@@ -6,8 +6,6 @@ function ahmedmohd_setup() {
     add_image_size( 'ahmedmohd-featured-image', 2000, 1200, true );
     add_image_size( 'ahmedmohd-thumbnail-avatar', 100, 100, true );
     
-    // Set the default content width.
-    $GLOBALS['content_width'] = 750;
     
     // This theme uses wp_nav_menu() in two locations.
     register_nav_menus( array(
@@ -50,21 +48,23 @@ function ahmedmohd_excerpt_more( $link ) {
     esc_url( get_permalink( get_the_ID() ) ),
     sprintf( __( 'Read more...', 'ahmedmohd' ), get_the_title( get_the_ID() ) )
     );
-    return ' &hellip; ' . $link;
+    // return ' &hellip; ' . $link;
+    return null;
 }
 add_filter( 'excerpt_more', 'ahmedmohd_excerpt_more' );
 /**
 * Enqueue scripts and styles.
 */
 function ahmedmohd_scripts() {
-    wp_enqueue_style( 'bootstrap_css', "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" );
-    wp_enqueue_style( 'googlefonts', "https://fonts.googleapis.com/css?family=Inconsolata|Noto+Sans" );
+    wp_enqueue_style( 'bootstrap_css', "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" );
+    wp_enqueue_style( 'googlefonts', "https://fonts.googleapis.com/css?family=Quicksand|Inconsolata" );
     wp_enqueue_style( 'style', get_stylesheet_uri() );
     wp_enqueue_style( 'fontawesome_css', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" );
     wp_enqueue_style( 'prism_css', get_theme_file_uri( '/assets/prism.css' ) );
     
     wp_enqueue_script( 'jquery_js', "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" , array() );
-    wp_enqueue_script( 'bootstrap_js', "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", array() );
+    wp_enqueue_script( 'popper_js', "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js", array() );
+    wp_enqueue_script( 'bootstrap_js', "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js", array() );
     wp_enqueue_script( 'trianglify_js', "https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js", array() );
     wp_enqueue_script( 'prefixfree', get_theme_file_uri( '/assets/prefixfree.min.js' ), array());
     wp_enqueue_script( 'prism_js', get_theme_file_uri( '/assets/prism.js' ), array());
@@ -93,7 +93,7 @@ function ahmedmohd_settings_page(){ ?>
   <?php }
 
 function ahmedmohd_settings_page_setup(){
-
+    
     add_settings_section( 'section', 'Social Accounts', null, 'theme-settings' );
     
     add_settings_field( 'twitter', 'Twitter Handle', 'setting_twitter', 'theme-settings', 'section' );

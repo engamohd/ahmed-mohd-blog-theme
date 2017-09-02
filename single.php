@@ -1,32 +1,42 @@
 <?php get_header(); ?>
-  <div class="container" id="content-area">
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="grav-thumb-wrapper">
-          <?php if(''!== get_option( 'gravatar' )): ?>
-            <img class="img-circle" src=<?php echo ( "'http://gravatar.com/avatar/" . md5( strtolower( trim( get_option( 'gravatar') ) ) ) . "'"); ?>/>
-            <?php endif; ?>
-        </div>
 
+  <div class="container">
+
+
+    <div class="row my-4 text-center">
+      <div class="col-12">
         <h1 class="blog-title">
-
-<a href=<?php echo ("'".get_bloginfo( 'wpurl' )."'"); ?>>
-
-<?php echo get_bloginfo( 'name' ); ?> </a>
-<?php echo " :: "; ?>
-<a class="post-link" href=<?php echo ( "'". get_the_permalink() . "'"); ?>>
-
-<span class="h3"><?php the_title( ); ?> </span></a>
+<a href=<?php echo ("'".get_bloginfo( 'wpurl' )."'"); ?>><?php echo (get_bloginfo( 'name' )); ?> </a>
 </h1>
+        <h3 class="text-muted blog-tag"><?php the_title(); ?></h3>
+
       </div>
     </div>
-    <div class="row-padding"></div>
-    <div class="row">
+
+
+    <div class="row my-4">
       <?php if ( have_posts() ): ?>
         <?php while ( have_posts() ) : the_post(); ?>
-          <?php get_template_part( 'content-single', get_post_format()); ?>
+
+          <?php get_template_part( 'content-single', get_post_format(  ) ); ?>
+
             <?php endwhile; ?>
-              <?php endif; ?>
+              <?php else: ?>
+                <h5>No posts yet.</h5>
+                <?php  endif; ?>
     </div>
+
+    <div class="row my-6 justify-content-center">
+      <ul class="nav pager">
+        <li class="nav-item">
+          <?php previous_post_link( ); ?>
+        </li>
+        <li class="nav-item">
+          <?php next_post_link( ); ?>
+        </li>
+      </ul>
+    </div>
+
+
   </div>
   <?php get_footer( ); ?>
