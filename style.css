@@ -4,7 +4,7 @@
   Author:           Ahmed Mohamed
   Author URI:       http://ahmedmohd.com
   Description:      Ahmed Mohamed's personal blog theme
-  Version:          2.1
+  Version:          2.2
   License:          MIT License
   License URI:      https://tldrlegal.com/license/mit-license
   Tags:             responsive-layout, black, white, one-column, custom-menu, bootstrap-4
@@ -53,7 +53,8 @@ code {
 }
 
 .blog-tag,
-.copyright-footer-text {
+.copyright-footer-text,
+.copyright-footer-text a {
     font-family: 'Dancing Script', cursive !important;
 }
 
@@ -98,6 +99,20 @@ code {
     .card-columns {
         column-count: 1;
     }
+}
+
+.search-field {
+    width: 30%;
+    border: 1px #404040 solid;
+    transition: all 0.4s ease-in-out;
+}
+
+.search-field:focus {
+    outline: none;
+}
+
+.search-field:focus {
+    width: 80%;
 }
 
 

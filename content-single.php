@@ -6,7 +6,8 @@
         <?php endif; ?>
           <div class="card-body">
             <h4 class="card-title text-center"><?php the_title(  ); ?></h4>
-            <h6 class="card-subtitle post-card-tag my-2 text-center text-muted"><?php the_date( ); ?> <?php echo( '&nbsp::&nbsp'); ?> <?php the_category( '&nbsp::&nbsp'); ?></h6>
+            <h6 class="card-subtitle post-card-tag my-2 text-center text-muted"><?php the_date( ); ?></h6>
+            <h6 class="card-subtitle post-card-tag my-2 text-center text-muted"><?php the_category( '&nbsp::&nbsp'); ?></h6>
             <h6 class="card-subtitle post-card-tag my-2 text-center text-muted"><?php printf( _nx( 'One comment', '%1$s comments', get_comments_number(), ''),number_format_i18n( get_comments_number() ) ); ?></h6>
             <p class="card-text">
               <?php the_content(); ?>
