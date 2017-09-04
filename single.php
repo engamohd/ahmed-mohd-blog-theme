@@ -15,6 +15,7 @@
 
 
     <div class="row my-4">
+
       <?php if ( have_posts() ): ?>
         <?php while ( have_posts() ) : the_post(); ?>
 
@@ -25,6 +26,16 @@
                 <h5>No posts yet.</h5>
                 <?php  endif; ?>
     </div>
+
+    <div class="row my-4">
+    <div class="col-12">
+
+   <?php if ( comments_open() || get_comments_number() ) : ?>
+	<?php comments_template(  ); ?>
+<?php endif; ?> 
+</div>
+</div>
+
 
     <div class="row my-6 justify-content-center">
       <ul class="nav pager">

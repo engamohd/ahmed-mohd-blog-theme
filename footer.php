@@ -17,7 +17,7 @@
     <div class="row my-4">
       <div class="col-12 text-center">
         <h5 class="copyright-footer-text">Copyright <?php echo date('Y'); ?>  <a href = <?php echo ("'".get_bloginfo( 'wpurl' )."'"); ?>>Ahmed Mohamed </a>. YNWA.</h5>
-        <h5>contact me on:</h5>
+        <h5 class="copyright-footer-text">contact me on:</h5>
       </div>
     </div>
 
@@ -49,6 +49,8 @@
 <script>
   $(document).ready(function() {
     $(".post-body img").addClass('img-fluid mx-auto d-block m-2 mt-3');
+    $("#searchsubmit").addClass('btn btn-outline-dark btn-sm');
+    $(".submit").addClass('btn btn-outline-dark btn-sm');
   });
 </script>
 </body>

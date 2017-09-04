@@ -32,14 +32,20 @@
     </div>
 
 
-    <div class="row my-4">
-      <ul class="nav pager">
+    <div class="row my-5 justify-content-center bb-2">
+      <ul class="nav pager  text-center">
+      <?php if(get_previous_posts_link( )!==null): ?>
         <li class="nav-item">
-          <?php previous_posts_link( 'Previous' ); ?>
+          <?php previous_posts_link( '<<' ); ?>
         </li>
+        <?php endif; ?>
+        <?php if(get_next_posts_link( )!==null): ?>
+
         <li class="nav-item">
-          <?php next_posts_link( 'Next' ); ?>
+          <?php next_posts_link( '>>' ); ?>
         </li>
+        <?php endif; ?>
+
       </ul>
     </div>
 

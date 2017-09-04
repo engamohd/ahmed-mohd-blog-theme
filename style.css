@@ -4,7 +4,7 @@
   Author:           Ahmed Mohamed
   Author URI:       http://ahmedmohd.com
   Description:      Ahmed Mohamed's personal blog theme
-  Version:          2.0
+  Version:          2.1
   License:          MIT License
   License URI:      https://tldrlegal.com/license/mit-license
   Tags:             responsive-layout, black, white, one-column, custom-menu, bootstrap-4
@@ -48,21 +48,18 @@ a:visited {
     text-decoration: dotted underline !important;
 }
 
-.blog-tag {
-    text-transform: lowercase;
-}
-
 code {
     font-family: 'Inconsolata', 'monospace';
+}
+
+.blog-tag,
+.copyright-footer-text {
+    font-family: 'Dancing Script', cursive !important;
 }
 
 .pw {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     background-color: white;
-}
-
-.blog-title {
-    text-transform: lowercase;
 }
 
 .post-thumbnail {
@@ -72,10 +69,6 @@ code {
 
 .nav>li {
     margin-right: 3rem;
-}
-
-.copyright-footer-text {
-    text-transform: lowercase;
 }
 
 .post-body img {
@@ -91,8 +84,85 @@ code {
     column-gap: 0;
 }
 
+.edit-post,
+.read-more,
+.post-card-tag,
+.copyright-footer-text,
+.blog-title,
+.blog-tag,
+.nav {
+    text-transform: lowercase;
+}
+
 @media (max-width: 767px) {
     .card-columns {
         column-count: 1;
     }
+}
+
+
+/** comment styles **/
+
+.comment-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.comment-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.comment {
+    padding: 1rem;
+    margin: 2rem;
+    margin-left: 2px;
+    background-color: #fefefe;
+    border: 1px solid #e0e0e0;
+    border-left: 5px solid #404040;
+    padding-left: 10px;
+}
+
+.says {
+    display: none;
+}
+
+.reply {
+    display: none;
+}
+
+.comment-metadata {
+    display: flex;
+}
+
+.edit-link {
+    align-self: end;
+    margin-left: auto;
+}
+
+.comment-content {
+    padding: 5px;
+    padding-left: 3rem;
+    margin-top: auto;
+    height: 100%;
+    text-align: justify;
+    text-justify: auto;
+}
+
+#comment {
+    width: 100%;
+}
+
+.bypostauthor .fn {
+    font-family: 'Dancing Script', cursive !important;
+    text-decoration: #404040 double underline;
+    font-size: 1.2rem;
+}
+
+.thread-odd {
+    background-color: #f0f0f0;
+}
+
+.avatar {
+    display: none;
 }
