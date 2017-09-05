@@ -57,7 +57,7 @@ add_filter( 'excerpt_more', 'ahmedmohd_excerpt_more' );
 */
 function ahmedmohd_scripts() {
     wp_enqueue_style( 'bootstrap_css', "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" );
-    wp_enqueue_style( 'googlefonts', "https://fonts.googleapis.com/css?family=Quicksand|Inconsolata|Dancing+Script" );
+    wp_enqueue_style( 'googlefonts', "https://fonts.googleapis.com/css?family=Roboto|Inconsolata|Dancing+Script" );
     wp_enqueue_style( 'style', get_stylesheet_uri() );
     wp_enqueue_style( 'fontawesome_css', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" );
     wp_enqueue_style( 'prism_css', get_theme_file_uri( '/assets/prism.css' ) );
