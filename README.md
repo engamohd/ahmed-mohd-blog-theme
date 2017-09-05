@@ -35,4 +35,4 @@ This is <a href="http://ahmedmohd.com">Ahmed Mohamed's personal Wordpress blog</
 
 </ul>
 
-Feel free to use change and share your edits. I am planning to release a minimal theme as a starter theme for autodidicats.
+Feel free to use change and share your edits. I am planning to release the theme as minimal theme as a starter WP theme for autodidicats.
