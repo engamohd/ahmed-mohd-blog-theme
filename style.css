@@ -4,7 +4,7 @@
   Author:           Ahmed Mohamed
   Author URI:       http://ahmedmohd.com
   Description:      Ahmed Mohamed's personal blog theme
-  Version:          2.2
+  Version:          2.3
   License:          MIT License
   License URI:      https://tldrlegal.com/license/mit-license
   Tags:             responsive-layout, black, white, one-column, custom-menu, bootstrap-4
@@ -103,26 +103,19 @@ code {
 
 .search-field {
     width: 30%;
-    border: 1px #404040 solid;
+    border: 1px #d0d0d0 solid;
+    opacity: 0.5;
     transition: all 0.4s ease-in-out;
 }
 
 .search-field:focus {
+    width: 80%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    opacity: 1;
     outline: none;
 }
 
-.search-field:focus {
-    width: 80%;
-}
-
-
-/** comment styles **/
-
-.comment-list {
-    list-style: none;
-    padding-left: 0;
-}
-
+.comment-list,
 .comment-list ul {
     list-style: none;
     padding-left: 0;
@@ -138,21 +131,12 @@ code {
     padding-left: 10px;
 }
 
+.thread-odd {
+    background-color: #f0f0f0;
+}
+
 .says {
     display: none;
-}
-
-.reply {
-    display: none;
-}
-
-.comment-metadata {
-    display: flex;
-}
-
-.edit-link {
-    align-self: end;
-    margin-left: auto;
 }
 
 .comment-content {
@@ -164,16 +148,17 @@ code {
     text-justify: auto;
 }
 
-#comment {
-    width: 100%;
-}
-
 .bypostauthor .fn {
     font-family: 'Dancing Script', cursive !important;
     text-decoration: #404040 double underline;
     font-size: 1.2rem;
 }
 
-.thread-odd {
-    background-color: #f0f0f0;
+.comment-metadata {
+    display: flex;
+}
+
+.edit-link {
+    align-self: end;
+    margin-left: auto;
 }
